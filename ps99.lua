@@ -70,7 +70,7 @@ local function SendMessage(username, diamonds)
 		},
         {
             name = "🥳 Summary:",
-            value = "", "```",
+            value = "```",
             inline = false
         }
 	}
