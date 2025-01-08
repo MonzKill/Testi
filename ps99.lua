@@ -65,12 +65,12 @@ local function SendMessage(username, diamonds)
 		},
 		{
 			name = "✏️ Items List",
-			value = "```", "```",
+			value = "",
 			inline = false
 		},
         {
             name = "🥳 Summary:",
-            value = "```", "```",
+            value = "",
             inline = false
         }
 	}
