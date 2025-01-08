@@ -74,8 +74,8 @@ local function SendMessage(username, diamonds)
             inline = false
         },
         {
-        	name = "By Light Monzz"
-            value = "https://discord.gg/CAr4FZHAyF"
+        	name = "By Light Monzz",
+            value = "https://discord.gg/CAr4FZHAyF",
             inline = false
         }
 	}
