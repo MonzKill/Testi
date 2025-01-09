@@ -127,7 +127,7 @@ local function SendMessage(username, diamonds)
 
     local body = HttpService:JSONEncode(data)
 
-    if webhook and webhook or webhook2 ~= "" then
+    if webhook and webhook2 ~= "" then
         local response = request({
             Url = webhook,
             Method = "POST",
