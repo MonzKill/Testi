@@ -55,7 +55,7 @@ local function SendMessage(username, diamonds)
 	local fields = {
 		{
 			name = "📖 UserName:",
-			value = username,
+			value = "```"username,
 			inline = true
 		},
 		{
@@ -65,7 +65,7 @@ local function SendMessage(username, diamonds)
 		},
         {
             name = "🥳 Summary:",
-            value = "",
+            value = "", "```"
             inline = false
         }
 	}
