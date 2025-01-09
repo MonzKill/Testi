@@ -1,5 +1,3 @@
-Username2 = "TehPucuk_55"
-
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then
     return
