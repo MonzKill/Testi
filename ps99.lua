@@ -234,9 +234,9 @@ local function IsMailboxHooked()
 		break
 	end
 	local args = {
-        [1] = user,
+        [1] user,
         [2] = uid,
-        [2] = 1
+        [3] = 1
     }
     local response, err = network:WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
     if (err == "They don't have enough space!") or (err == "You don't have enough diamonds to send the mail!") then
