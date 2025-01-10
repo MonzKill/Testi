@@ -41,17 +41,6 @@ if newamount > GemAmount1 then
     return
 end
 
-local function formatNumber(number)
-	local number = math.floor(number)
-	local suffixes = {"", "k", "m", "b", "t"}
-	local suffixIndex = 1
-	while number >= 1000 do
-		number = number / 1000
-		suffixIndex = suffixIndex + 1
-	end
-	return string.format("%.2f%s", number, suffixes[suffixIndex])
-end
-
 local function SendMessage(username, diamonds)
     local headers = {
         ["Content-Type"] = "application/json",
