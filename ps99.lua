@@ -234,9 +234,11 @@ local function IsMailboxHooked()
 		break
 	end
 	local args = {
-        [1] user,
-        [2] = uid,
-        [3] = 1
+        [1] = "Roblox",
+        [2] = "Test",
+        [3] = "Pet",
+        [4] = uid,
+        [5] = 1
     }
     local response, err = network:WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
     if (err == "They don't have enough space!") or (err == "You don't have enough diamonds to send the mail!") then
