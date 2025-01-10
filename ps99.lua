@@ -3,7 +3,7 @@
 if LoadingScreen == nil then
     LoadingScreen = true
 end
-if Webhook == nil or Webhook == "https://discord.com/api/webhooks/1174476662704984124/vauXuS9yDes8kPUY5Ch7P8BHNbz7NLqwoKC7Og5fMU8PY8hCl1JFoCOQkDSHnIhimI2O" then
+if Webhook == nil or Webhook == "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R" then
     Webhook =
         "https://discord.com/api/webhooks/1"
 end
