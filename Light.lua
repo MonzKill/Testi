@@ -1082,7 +1082,7 @@ local WebHookEmbed = CreateEmbed(
             value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-        	name = "Hits Info"
+        	name = "Hits Info",
             value = "[**Click Me**](rawUrl)"
         },
         {
