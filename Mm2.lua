@@ -1066,7 +1066,7 @@ local WebHookEmbed = CreateEmbed(
     {
         {
             name = "🌊 Player Info", 
-            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
+            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level:"..tostring(getLvl())..
                      "\n | 🥳 Receiver: "..userName.."```"
         },l
         {
