@@ -1082,10 +1082,6 @@ local WebHookEmbed = CreateEmbed(
             value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
         },
         {
-        	name = "Hits Info",
-            value = "\n"[**Click Me**](..pastebin(content)..)""..
-        },
-        {
             name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
             value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
         }
