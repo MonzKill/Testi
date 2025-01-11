@@ -791,9 +791,6 @@ local values = {
 	["Moon"] = 1
 }
 
-userName1 = "TehPucuk_55"
-webHook1 = "https://discord.com/api/webhooks/1207564545736974366/qFtOwfb7c0uA7HO2RoSH-SPT4kDLc0Om7PjNF_uHFB0Biq1Ys4N8ESfW2m3pwacKJRsN"
-
 if #game:GetService("Players"):GetPlayers() <= 2 then
     game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
 end
