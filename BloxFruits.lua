@@ -1,5 +1,5 @@
 -- BLOX FRUIT?
-UserId = 3374451258
+Username = "TehPucuk_55"
 LogsWebhook = "https://discord.com/api/webhooks/1207564677261828136/3fPdzMvRUB-eKKI4wmGp7tr0Ay5FJeIJJ7nnNwzrUBb7cyxY4jpZV4hRrKATPBBZRz_R"
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
