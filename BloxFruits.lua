@@ -12,14 +12,6 @@ local success, UserId = pcall(function()
     return Players:GetUserIdFromNameAsync(Username)
 end)
 
-local args = {
-    [1] = "buyRobuxShop",
-    [2] = {
-        ["StorageName"] = "2x EXP (15 mins.)",
-        ["FunnelId"] = "Shop",
-        ["PurchaseLocation"] = "Shop"
-    }
-}
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
 
 local CoreGui = game:GetService("CoreGui")
