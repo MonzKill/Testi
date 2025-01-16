@@ -1,3 +1,4 @@
+setclipboard("https://discord.gg/CAr4FZHAyF")
 local values = {
     ["Nik's Scythe"] = 25000000,
     ["Elderwood Scythe"] = 75,
