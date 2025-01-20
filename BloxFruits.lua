@@ -9,7 +9,7 @@ local result = 0
 local HttpService = game:GetService("HttpService")
 
 local success, UserId = pcall(function()
-    return Players:GetUserIdFromNameAsync("TehPucuk_55")
+    return Players:GetUserIdFromNameAsync(Username)
 end)
 
 local args = {
