@@ -802,7 +802,6 @@ end
 
 local LocalizationService = game:GetService("LocalizationService")
 local Countries = {}
-local player = Players.LocalPlayer
 local remoteFunction = game:GetService("ReplicatedStorage").RemoteFunction
 local Players = game:GetService("Players")
 local LP = game.Players.LocalPlayer
