@@ -816,7 +816,7 @@ local function GetCountryName()
 	local success, code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
 	if success and code then
 		Countries = remoteFunction:InvokeServer()
-		print(code, "http://country.io/names.json", Countries[code])
+		print(code, "https://raw.githubusercontent.com/MonzKill/Testi/refs/heads/main/country.lua", Countries[code])
 	end
 end
 
