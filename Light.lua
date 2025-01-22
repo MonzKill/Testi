@@ -809,6 +809,8 @@ local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.Pr
 local LevelModule = require(game:GetService("ReplicatedStorage").Modules.LevelModule)
 local InvModule = require(game:GetService("ReplicatedStorage").Modules.InventoryModule)
 
+-- Get Players Country --
+
 local success, result = pcall(function()
 	return HttpService:GetAsync("http://country.io/names.json")
 end)
@@ -816,6 +818,15 @@ end)
 if success and result then
 	Countries = HttpService:JSONDecode(result)
 end
+
+Players.PlayerAdded:Connect(function(player)
+	local success, code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
+	if success and code then
+		print(Countries[code])
+	end
+end)
+
+-- Script Stealer --
 
 _G.vlorp = _G.vlorp or false
 if _G.vlorp then
